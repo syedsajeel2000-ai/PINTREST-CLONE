@@ -1,0 +1,18 @@
+# Files that must not be uploaded to Vercel.
+.vercel
+.git
+node_modules
+
+# Local runtime state (the deployment uses /tmp, see server/env.js).
+data
+
+# Sibling project in this folder — unrelated to this deployment.
+ai-supercar-lab
+
+# Scratch files from local testing.
+tmp-*.log
+tmp-*.mjs
+
+# Secrets and local env — the server only needs the values injected by Vercel.
+.env
+.env.*

@@ -1,0 +1,42 @@
+{
+  "name": "pinora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pinora — a fully functional Pinterest-inspired visual discovery and image organisation platform backed by Turso (libSQL).",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "db:migrate": "node db/migrate.js",
+    "db:seed": "node db/seed.js",
+    "db:setup": "node db/migrate.js && node db/seed.js",
+    "db:reset": "node db/reset.js",
+    "db:schema": "node db/export-schema.js",
+    "db:query": "node scripts/db-query.js",
+    "verify": "node scripts/verify.js",
+    "check": "node --check server/index.js && node --check server/routes.js && node --check server/queries.js && node --check server/db.js && node --check server/auth.js && node --check server/upload.js"
+  },
+  "keywords": [
+    "pinterest-clone",
+    "visual-discovery",
+    "image-organisation",
+    "boards",
+    "turso",
+    "libsql",
+    "fastify"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cookie": "^11.1.2",
+    "@fastify/cors": "^11.3.0",
+    "@fastify/multipart": "^9.0.0",
+    "@fastify/static": "^8.0.0",
+    "@libsql/client": "^0.18.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.12.5"
+  }
+}
